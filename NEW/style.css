@@ -16,7 +16,7 @@ h1 {
   left: 35%;
   right: 35%;
   position: fixed;
-  background-color: #4CD964;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 30px;
 }
 a {
@@ -29,10 +29,19 @@ a {
   text-decoration: underline;
 }
 svg {
+  fill: var(--fg);
   vertical-align: middle;
 }
 svg:hover {
   fill: #472246;
+}
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
 ::-webkit-scrollbar {
   width: 8px;
