@@ -1,0 +1,6 @@
+{
+  "htmlWhitespaceSensitivity": "ignore",
+  "endOfLine": "crlf",
+  "printWidth": 80,
+  "jsxBracketSameLine": true
+}
