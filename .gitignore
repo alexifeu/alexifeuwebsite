@@ -1,3 +1,4 @@
 # ignore SASS generated map files
 *.css.map
 *.sass
+*.scss
