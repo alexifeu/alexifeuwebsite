@@ -15,8 +15,13 @@ input {
   background-color: #bdc1c6;
   color: #121212;
 }
-input[type=submit] {
-  background-image: linear-gradient(to right, #614385 0%, #516395 51%, #614385 100%);
+input[type="submit"] {
+  background-image: linear-gradient(
+    to right,
+    #614385 0%,
+    #516395 51%,
+    #614385 100%
+  );
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
@@ -28,8 +33,8 @@ input[type=submit] {
   display: block;
   margin: auto;
 }
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
-}/*# sourceMappingURL=login.css.map */
+}
