@@ -1,0 +1,72 @@
+html {
+  overflow-y: scroll;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #bdc1c6;
+}
+
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f1f1f;
+    color: #bdc1c6;
+    fill: #bdc1c6;
+  }
+}
+body .fill:hover svg {
+  color: navy;
+  fill: navy;
+}
+body .fill:hover span {
+  color: navy;
+}
+body h1 {
+  margin-top: 69px;
+}
+body .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 900px;
+  padding: 10px 25px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  fill: white;
+}
+body .navbar a {
+  font-size: 38px;
+  color: var(--fg);
+  text-decoration: none;
+}
+body .navbar a.navButton {
+  display: flex;
+  align-items: center;
+}
+body .navbar a.navButton span {
+  margin-left: 5px;
+}
+body .navbar a svg {
+  height: 36px;
+}
+body .top {
+  margin-top: 100px;
+}
+body video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}/*# sourceMappingURL=default.css.map */

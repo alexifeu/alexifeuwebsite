@@ -1,0 +1,3 @@
+# ignore SASS files
+*.css.map
+*.sass
