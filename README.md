@@ -1,3 +1,3 @@
 # README
 
-Fork of alexifeu/alexifeuwebsite with improvements / suggestions
+Fork of alexifeu/alexifeuwebsite with improvements / suggestions.
