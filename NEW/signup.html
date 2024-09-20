@@ -72,13 +72,13 @@
     </nav>
     <video src="img/Wave.webm" autoplay loop></video>
     <h1>Signup</h1>
-    <form method="post">
-      <input type="text" required />
-      <label>Username</label>
-      <input type="password" required />
-      <label>Password</label>
-      <p>Already a member? <a class="login" href="login.html">Login</a></p>
+    <form method="post" action="process_signup.php">
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Choose Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <p class="pass">Forgot Password?</p>
       <input type="submit" value="Get Started" />
+      <p>Already a member? <a class="login" href="login.html">Login</a></p>
     </form>
   </body>
 </html>
