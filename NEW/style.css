@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   height: 100vh;
 }
 html {
@@ -40,6 +41,7 @@ a {
   font-size: 40px;
   color: var(--fg);
   text-decoration: none;
+  flex: 1;
 }
 .login {
   margin: 0;
