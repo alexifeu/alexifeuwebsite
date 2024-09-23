@@ -16,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Process sign-up (e.g., store user data in a database)
         // Replace with your actual database logic
         echo "Sign-up successful!";
+        $query = "INSERT INTO users VALUES('','$name','$username','$password')";
+        mysqli_query($conn,$query);
     }
 }
 ?>
