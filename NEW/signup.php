@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+var_dump($_POST);
 if (isset($_POST["submit"])) {
   $name = $_POST['name'];
   $username = $_POST['username'];
@@ -113,8 +114,8 @@ if (isset($_POST["submit"])) {
       name="confirmpassword"
       required />
     <p class="pass">Forgot Password?</p>
-    <input type="submit" value="Get Started" />
-    <p>Already a member? <a class="login" href="login.html">Login</a></p>
+    <input type="submit" name="submit" value="Get Started" />
+    <p>Already a member? <a class="login" href="login.php">Login</a></p>
   </form>
 </body>
 

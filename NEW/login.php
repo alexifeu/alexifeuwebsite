@@ -1,7 +1,9 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+require 'config.php';
+var_dump($_POST);
+if (isset($_POST["submit"])) {
+  $usernameemail = $_POST["usernameemail"];
+  $password = $_POST["password"];
   $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
   if ($row = mysqli_fetch_assoc($result)) {
     if (password_verify($password, $row['password'])) {
@@ -82,10 +84,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </nav>
   <h1>Login</h1>
   <form method="post" action="" autocomplete="off">
-    <input type="text" id="username" placeholder="Username" required />
-    <input type="password" id="password" placeholder="Password" required />
+    <input type="text" name="username" id="username" placeholder="Username" required />
+    <input type="password" name="password" id="password" placeholder="Password" required />
     <p class="pass">Forgot Password?</p>
-    <input type="submit" value="Login" />
+    <input type="submit" name="submit" value="Login" />
     <p>Not a member? <a class="login" href="signup.php">Signup</a></p>
   </form>
 </body>
