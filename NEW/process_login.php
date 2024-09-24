@@ -1,19 +1,17 @@
 <?php
-// Validate form input
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
-    // Replace with your actual database logic to fetch user data
-    $user = getUserData($username);
-
-    // Check if user exists and password matches
-    if ($user && password_verify($password, $user['password'])) {
-        // Successful login (e.g., start a session)
-        $_SESSION['user_id'] = $user['id'];
-        header('Location: dashboard.php'); // Redirect to dashboard
-    } else {
-        // Invalid credentials
-        echo "Invalid username or password.";
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+    if ($row = mysqli_fetch_assoc($result)) {
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['login'] = true;
+            $_SESSION['id'] = $row['id'];
+            header('Location: Index.html');
+        } else {
+            echo 'Wrong Password';
+        }
     }
+} else {
+    echo 'User not found';
 }
