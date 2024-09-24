@@ -24,5 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "INSERT INTO users VALUES('','$name','$username','$email','$password')";
         mysqli_query($conn, $query);
     }
+    header('Location: index.php');
     exit();
 }
