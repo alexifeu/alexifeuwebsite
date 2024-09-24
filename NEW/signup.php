@@ -16,7 +16,8 @@ if (isset($_POST["submit"])) {
       mysqli_query($conn, $query);
       echo "Yey ur now registered m8!";
     } else {
-      echo "U wot m8? wrong password";
+      echo
+      "<script> alert('Password wrong'); </script>";
     }
   }
 }

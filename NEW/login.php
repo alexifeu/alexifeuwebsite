@@ -9,11 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $_SESSION['id'] = $row['id'];
       header('Location: Index.html');
     } else {
-      echo 'Wrong Password';
+      echo
+      "<script> alert('Wrong Password'); </script>";
     }
   }
 } else {
-  echo 'User not found';
+  echo
+  "<script> alert('Username not registered'); </script>";
 }
 ?>
 <!DOCTYPE html>
@@ -65,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </svg>
       About
     </a>
-    <a class="fill" href="signup.html"><svg
+    <a class="fill" href="signup.php"><svg
         class="fill"
         xmlns="http://www.w3.org/2000/svg"
         height="48px"
@@ -79,12 +81,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </a>
   </nav>
   <h1>Login</h1>
-  <form method="post" action="process_login.php">
+  <form method="post" action="" autocomplete="off">
     <input type="text" id="username" placeholder="Username" required />
     <input type="password" id="password" placeholder="Password" required />
     <p class="pass">Forgot Password?</p>
     <input type="submit" value="Login" />
-    <p>Not a member? <a class="login" href="signup.html">Signup</a></p>
+    <p>Not a member? <a class="login" href="signup.php">Signup</a></p>
   </form>
 </body>
 
