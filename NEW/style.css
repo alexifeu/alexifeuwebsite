@@ -57,10 +57,16 @@ input {
   border-radius: 25px;
   background-color: #bdc1c6;
   color: #121212;
+  width: 150px;
+  border: none;
 }
-.fill:hover {
+.navbar a:hover {
   color: navy;
   fill: navy;
+}
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
 }
 input[type="submit"] {
   background-image: linear-gradient(
@@ -76,12 +82,13 @@ input[type="submit"] {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 0 20px #614385;
   display: block;
   margin: auto;
+  width: auto;
 }
 input[type="submit"]:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
