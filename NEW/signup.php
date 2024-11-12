@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-var_dump($_POST);
+#var_dump($_POST);
 if (isset($_POST["submit"])) {
   $name = $_POST['name'];
   $username = $_POST['username'];
