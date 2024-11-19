@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD:New/login.php
 
 
 require 'config.php';
@@ -12,12 +13,22 @@ if (isset($_POST["submit"])) {
   $result = $stmt->get_result();
 
   if ($row = $result->fetch_assoc()) {
+=======
+require 'config.php';
+#var_dump($_POST);
+if (isset($_POST["submit"])) {
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+  $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+  if ($row = mysqli_fetch_assoc($result)) {
+>>>>>>> 4322b8a19c88d5007a08f490a6d0632e40c62fdb:NEW/login.php
     if (password_verify($password, $row['password'])) {
       $_SESSION['login'] = true;
       $_SESSION['id'] = $row['id'];
       echo "Yey ur now logged in m8!";
       header('Location: Index.html');
       exit;
+<<<<<<< HEAD:New/login.php
     } else {
       echo "Incorrect password.";
     }
@@ -26,6 +37,10 @@ if (isset($_POST["submit"])) {
   }
 
   $stmt->close();
+=======
+    }
+  }
+>>>>>>> 4322b8a19c88d5007a08f490a6d0632e40c62fdb:NEW/login.php
 }
 ?>
 <!DOCTYPE html>
