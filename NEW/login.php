@@ -1,5 +1,5 @@
 <?php
-/*require 'config.php';
+require 'config.php';
 #var_dump($_POST);
 if (isset($_POST["submit"])) {
   $username = $_POST["username"];
@@ -14,35 +14,6 @@ if (isset($_POST["submit"])) {
       exit;
     }
   }
-}
-?>
-old code */
-
-require 'config.php';
-if (isset($_POST["submit"])) {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-
-  $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-  $stmt->bind_param("s", $username);
-  $stmt->execute();
-  $result = $stmt->get_result();
-
-  if ($row = $result->fetch_assoc()) {
-    if (password_verify($password, $row['password'])) {
-      $_SESSION['login'] = true;
-      $_SESSION['id'] = $row['id'];
-      echo "Yey ur now logged in m8!";
-      header('Location: Index.html');
-      exit;
-    } else {
-      echo "Incorrect password.";
-    }
-  } else {
-    echo "Username not found.";
-  }
-
-  $stmt->close();
 }
 ?>
 <!DOCTYPE html>
