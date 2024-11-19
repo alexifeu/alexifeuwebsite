@@ -1,22 +1,5 @@
 <?php
-/*require 'config.php';
-#var_dump($_POST);
-if (isset($_POST["submit"])) {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-  $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
-  if ($row = mysqli_fetch_assoc($result)) {
-    if (password_verify($password, $row['password'])) {
-      $_SESSION['login'] = true;
-      $_SESSION['id'] = $row['id'];
-      echo "Yey ur now logged in m8!";
-      header('Location: Index.html');
-      exit;
-    }
-  }
-}
-?>
-old code */
+
 
 require 'config.php';
 if (isset($_POST["submit"])) {

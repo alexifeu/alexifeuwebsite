@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+/*require 'config.php';
 #var_dump($_POST);
 if (isset($_POST["submit"])) {
   $name = $_POST['name'];
@@ -7,20 +7,52 @@ if (isset($_POST["submit"])) {
   $email = $_POST['email'];
   $password = $_POST['password'];
   $confirmpassword = $_POST['confirmpassword'];
+  $pw_hashed = password_hash($password, PASSWORD_BCRYPT);
   $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username' OR email = '$email'");
   if (mysqli_num_rows($duplicate) > 0) {
     echo
     "<script> alert('Username or Email Has Already Been Taken'); </script>";
   } else {
     if ($password == $confirmpassword) {
-      $query = "INSERT INTO users VALUES('','$name', '$username', '$email', '$password')";
-      mysqli_query($conn, $query);
+      $statement = $conn->prepare("INSERT INTO users (name, username, email, password) VALUES (?,?,?,?)");
+      $statement->bind_param("ssss", $name, $username, $email, $pw_hashed); // <- s for nnn
+      $statement->execute();
+      $statement->close();
       echo "Yey ur now registered m8!";
     } else {
       echo
       "<script> alert('Password wrong'); </script>";
     }
   }
+}*/
+
+require 'config.php'; // Stellt sicher, dass die Datenbankverbindung geladen wird
+#var_dump($_POST);
+
+if (isset($_POST["submit"])) {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // Überprüfen, ob der Benutzername in der Datenbank existiert
+  $query = $conn->prepare("SELECT * FROM users WHERE username = ?");
+  $query->bind_param("s", $username);
+  $query->execute();
+  $result = $query->get_result();
+
+  if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+
+    // Passwort überprüfen
+    if (password_verify($password, $user['password'])) {
+      echo "<script> alert('Du bist jetzt eingeloggt!'); </script>";
+    } else {
+      echo "<script> alert('Falsches Passwort!'); </script>";
+    }
+  } else {
+    echo "<script> alert('Benutzername existiert nicht!'); </script>";
+  }
+
+  $query->close();
 }
 ?>
 <!DOCTYPE html>
@@ -85,7 +117,7 @@ if (isset($_POST["submit"])) {
       Login
     </a>
   </nav>
-  <video src="img/Wave.webm" autoplay loop></video>
+  <!--<video src="img/Wave.webm" autoplay loop></video>-->
   <h1>Signup</h1>
   <form method="post" action="" autocomplete="off">
     <input type="text" placeholder="Name" id="name" name="name" required />

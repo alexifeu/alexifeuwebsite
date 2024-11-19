@@ -1,3 +1,6 @@
+:root {
+  color-scheme: light-dark;
+}
 body {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -5,20 +8,17 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100vh;
+  background-color: light-dark(#fff, #444);
+  color: light-dark(#444, #fff);
+}
+.light {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
 }
 html {
   overflow-y: scroll;
-}
-.dark-mode {
-  background-color: #121212;
-  color: #bdc1c6;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1f1f1f;
-    color: #bdc1c6;
-    fill: #bdc1c6;
-  }
 }
 h1 {
   margin-top: 69px;
@@ -50,7 +50,6 @@ a {
 .login:hover {
   text-decoration: underline;
 }
-
 .loginbody {
   margin: 0;
   padding: 0;
@@ -67,10 +66,6 @@ input {
 .navbar a:hover {
   color: navy;
   fill: navy;
-}
-input[type="text"]:hover,
-input[type="password"]:hover,
-input[type="email"]:hover {
 }
 input[type="submit"] {
   background-image: linear-gradient(
