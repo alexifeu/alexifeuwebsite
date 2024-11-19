@@ -1,46 +1,31 @@
 <?php
-<<<<<<< HEAD:New/login.php
-
-
-require 'config.php';
-if (isset($_POST["submit"])) {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-
-  $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-  $stmt->bind_param("s", $username);
-  $stmt->execute();
-  $result = $stmt->get_result();
-
-  if ($row = $result->fetch_assoc()) {
-=======
-require 'config.php';
+require 'config.php'; // Stellt sicher, dass die Datenbankverbindung geladen wird
 #var_dump($_POST);
+
 if (isset($_POST["submit"])) {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-  $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
-  if ($row = mysqli_fetch_assoc($result)) {
->>>>>>> 4322b8a19c88d5007a08f490a6d0632e40c62fdb:NEW/login.php
-    if (password_verify($password, $row['password'])) {
-      $_SESSION['login'] = true;
-      $_SESSION['id'] = $row['id'];
-      echo "Yey ur now logged in m8!";
-      header('Location: Index.html');
-      exit;
-<<<<<<< HEAD:New/login.php
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // Überprüfen, ob der Benutzername in der Datenbank existiert
+  $query = $conn->prepare("SELECT * FROM users WHERE username = ?");
+  $query->bind_param("s", $username);
+  $query->execute();
+  $result = $query->get_result();
+
+  if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+
+    // Passwort überprüfen
+    if (password_verify($password, $user['password'])) {
+      echo "<script> alert('Du bist jetzt eingeloggt!'); </script>";
     } else {
-      echo "Incorrect password.";
+      echo "<script> alert('Falsches Passwort!'); </script>";
     }
   } else {
-    echo "Username not found.";
+    echo "<script> alert('Benutzername existiert nicht!'); </script>";
   }
 
-  $stmt->close();
-=======
-    }
-  }
->>>>>>> 4322b8a19c88d5007a08f490a6d0632e40c62fdb:NEW/login.php
+  $query->close();
 }
 ?>
 <!DOCTYPE html>

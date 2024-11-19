@@ -1,5 +1,5 @@
 <?php
-/*require 'config.php';
+require 'config.php';
 #var_dump($_POST);
 if (isset($_POST["submit"])) {
   $name = $_POST['name'];
@@ -24,35 +24,6 @@ if (isset($_POST["submit"])) {
       "<script> alert('Password wrong'); </script>";
     }
   }
-}*/
-
-require 'config.php'; // Stellt sicher, dass die Datenbankverbindung geladen wird
-#var_dump($_POST);
-
-if (isset($_POST["submit"])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  // Überprüfen, ob der Benutzername in der Datenbank existiert
-  $query = $conn->prepare("SELECT * FROM users WHERE username = ?");
-  $query->bind_param("s", $username);
-  $query->execute();
-  $result = $query->get_result();
-
-  if ($result->num_rows > 0) {
-    $user = $result->fetch_assoc();
-
-    // Passwort überprüfen
-    if (password_verify($password, $user['password'])) {
-      echo "<script> alert('Du bist jetzt eingeloggt!'); </script>";
-    } else {
-      echo "<script> alert('Falsches Passwort!'); </script>";
-    }
-  } else {
-    echo "<script> alert('Benutzername existiert nicht!'); </script>";
-  }
-
-  $query->close();
 }
 ?>
 <!DOCTYPE html>
