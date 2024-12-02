@@ -1,31 +1,47 @@
 <?php
 require 'config.php';
-#var_dump($_POST);
+
 if (isset($_POST["submit"])) {
+  // Eingaben aus dem Formular abrufen
   $name = $_POST['name'];
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
   $confirmpassword = $_POST['confirmpassword'];
+
+  // Passwort verschlüsseln
   $pw_hashed = password_hash($password, PASSWORD_BCRYPT);
-  $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username' OR email = '$email'");
-  if (mysqli_num_rows($duplicate) > 0) {
-    echo
-    "<script> alert('Username or Email Has Already Been Taken'); </script>";
+
+  // Überprüfen, ob Benutzername oder E-Mail bereits existieren
+  $duplicateQuery = "SELECT * FROM users WHERE username = ? OR email = ?";
+  $duplicateStmt = $conn->prepare($duplicateQuery);
+  $duplicateStmt->bind_param("ss", $username, $email);
+  $duplicateStmt->execute();
+  $result = $duplicateStmt->get_result();
+
+  if ($result->num_rows > 0) {
+    echo "<script> alert('Username oder Email ist bereits vergeben!'); </script>";
   } else {
-    if ($password == $confirmpassword) {
-      $statement = $conn->prepare("INSERT INTO users (name, username, email, password) VALUES (?,?,?,?)");
-      $statement->bind_param("ssss", $name, $username, $email, $pw_hashed); // <- s for nnn
-      $statement->execute();
-      $statement->close();
-      echo "Yey ur now registered m8!";
+    // Überprüfen, ob die Passwörter übereinstimmen
+    if ($password === $confirmpassword) {
+      // Benutzer in die Datenbank einfügen
+      $insertQuery = "INSERT INTO users (name, username, email, password) VALUES (?, ?, ?, ?)";
+      $insertStmt = $conn->prepare($insertQuery);
+      $insertStmt->bind_param("ssss", $name, $username, $email, $pw_hashed);
+      $insertStmt->execute();
+      $insertStmt->close();
+
+      echo "<script> alert('Du bist jetzt registriert!'); </script>";
     } else {
-      echo
-      "<script> alert('Password wrong'); </script>";
+      echo "<script> alert('Die Passwörter stimmen nicht überein!'); </script>";
     }
   }
+
+  // Ressourcen schließen
+  $duplicateStmt->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

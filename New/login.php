@@ -1,12 +1,9 @@
 <?php
-require 'config.php'; // Stellt sicher, dass die Datenbankverbindung geladen wird
-#var_dump($_POST);
-
+require 'config.php';
 if (isset($_POST["submit"])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  // Überprüfen, ob der Benutzername in der Datenbank existiert
   $query = $conn->prepare("SELECT * FROM users WHERE username = ?");
   $query->bind_param("s", $username);
   $query->execute();
@@ -15,9 +12,14 @@ if (isset($_POST["submit"])) {
   if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
 
-    // Passwort überprüfen
     if (password_verify($password, $user['password'])) {
+      // Store user data in session
+      $_SESSION['user_id'] = $user['id'];
+      $_SESSION['username'] = $user['username'];
+      $_SESSION['name'] = $user['name'];
+      $_SESSION['email'] = $user['email'];
       echo "<script> alert('Du bist jetzt eingeloggt!'); </script>";
+      header("Location: profile.php");
     } else {
       echo "<script> alert('Falsches Passwort!'); </script>";
     }
