@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light-dark;
+  color-scheme: light dark;
 }
 body {
   text-align: center;
@@ -11,14 +11,27 @@ body {
   background-color: light-dark(#fff, #444);
   color: light-dark(#444, #fff);
 }
-.light {
-  color-scheme: light;
+@media (prefers-color-scheme: light) {
+  .element {
+    color: black;
+    background-color: white;
+  }
 }
-.dark {
-  color-scheme: dark;
+
+@media (prefers-color-scheme: dark) {
+  .element {
+    color: white;
+    background-color: black;
+  }
 }
 html {
   overflow-y: scroll;
+}
+footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
 }
 h1 {
   margin-top: 69px;

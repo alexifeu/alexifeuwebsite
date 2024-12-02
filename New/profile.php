@@ -60,33 +60,3 @@
             Login
         </a>
     </nav>
-    <?php
-    require 'config.php'; // This file already starts the session and connects to the database
-
-    // Check if the user is logged in by verifying session variables
-    if (!isset($_SESSION['user_id'])) {
-        // Redirect to login page if no session exists
-        header("Location: login.php");
-        exit();
-    }
-
-    // Retrieve the user's profile information
-    $user_id = $_SESSION['user_id']; // Use the logged-in user's ID from session
-    $query = $conn->prepare("SELECT * FROM users WHERE id = ?");
-    $query->bind_param("i", $user_id); // Use the user's ID to fetch their profile
-    $query->execute();
-    $result = $query->get_result();
-
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        // Display profile information
-        echo "<h1>Willkommen, " . htmlspecialchars($user['username']) . "!</h1>";
-        echo "<p>Username: " . htmlspecialchars($user['username']) . "</p>";
-        echo "<p>Email: " . htmlspecialchars($_SESSION['email']) . "</p>";
-        // Add more user-specific content as needed
-    } else {
-        echo "<p>Benutzer nicht gefunden!</p>";
-    }
-
-    $query->close();
-    ?>
