@@ -24,16 +24,20 @@ body {
     background-color: black;
   }
 }
-
-@media screen and (max-width: 500px) {
+.navmobile {
+  display: none;
+}
+@media screen and (max-width: 560px) {
   .navbar {
     display: none !important;
   }
   img {
     width: 80%;
   }
+  .navmobile {
+    display: flex;
+  }
 }
-
 html {
   overflow-y: scroll;
 }
