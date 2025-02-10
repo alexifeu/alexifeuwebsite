@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /signup.php
+Allow: /profile.php
+Allow: /style.css
+Allow: /test.css
+Disallow: /test.php
+Disallow: /test.html
+Disallow: /img/
+Disallow: /*?*
+Disallow: /login.php
+#shoutout to last.fm
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders
+Disallow: /harm/to/self
+
+User-agent: ChatGPT
+Disallow: /
+
+User-agent: Gemini
+Disallow: /
+
+User-agent: DeepSeek
+Disallow: /
+
+User-agent: Baidu
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+Sitemap: https://alexifeu.com/sitemap.xml
