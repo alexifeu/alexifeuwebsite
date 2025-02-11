@@ -1,6 +1,21 @@
 :root {
   color-scheme: light dark;
 }
+@font-face {
+  font-family: "Chalet New York 1970";
+  src: url("../fonts/Chalet NewYorkNineteenSeventy Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.mlg {
+  font-family: "Chalet NewYorkNineteenSeventy", sans-serif;
+  font-size: 10vw;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
 body {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -11,6 +26,7 @@ body {
   background-color: light-dark(#fff, #444);
   color: light-dark(#444, #fff);
 }
+
 @media (prefers-color-scheme: light) {
   .element {
     color: black;
