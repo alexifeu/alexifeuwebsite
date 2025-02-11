@@ -11,7 +11,7 @@
 
 <body>
     <nav class="navbar">
-        <a class="fill" href="index.html"><svg
+        <a class="fill" href="index.php"><svg
                 class="fill"
                 xmlns="http://www.w3.org/2000/svg"
                 height="48px"
@@ -23,7 +23,7 @@
             </svg>
             Home
         </a>
-        <a class="fill" href="contact.html"><svg
+        <a class="fill" href="contact.php"><svg
                 class="fill"
                 xmlns="http://www.w3.org/2000/svg"
                 height="48px"
@@ -35,7 +35,7 @@
             </svg>
             Contact
         </a>
-        <a class="fill" href="about.html"><svg
+        <a class="fill" href="about.php"><svg
                 class="fill"
                 xmlns="http://www.w3.org/2000/svg"
                 height="48px"
@@ -61,7 +61,7 @@
         </a>
     </nav>
     <nav class="navmobile">
-        <a class="fill" href="index.html"><svg
+        <a class="fill" href="index.php"><svg
                 class="fill"
                 xmlns="http://www.w3.org/2000/svg"
                 height="48px"
@@ -72,7 +72,7 @@
                     d="M220-180h150v-250h220v250h150v-390L480-765 220-570v390Zm-60 60v-480l320-240 320 240v480H530v-250H430v250H160Zm320-353Z" />
             </svg>
         </a>
-        <a class="fill" href="contact.html"><svg
+        <a class="fill" href="contact.php"><svg
                 class="fill"
                 xmlns="http://www.w3.org/2000/svg"
                 height="48px"
@@ -83,7 +83,7 @@
                     d="M140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm340-302L140-685v465h680v-465L480-462Zm0-60 336-218H145l335 218ZM140-685v-55 520-465Z" />
             </svg>
         </a>
-        <a class="fill" href="about.html"><svg
+        <a class="fill" href="about.php"><svg
                 class="fill"
                 xmlns="http://www.w3.org/2000/svg"
                 height="48px"
@@ -109,3 +109,5 @@
             </svg>
         </a>
     </nav>
+
+</html>

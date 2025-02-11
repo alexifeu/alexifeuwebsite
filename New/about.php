@@ -1,35 +1,3 @@
-<?php
-require 'config.php';
-if (isset($_POST["submit"])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  $query = $conn->prepare("SELECT * FROM users WHERE username = ?");
-  $query->bind_param("s", $username);
-  $query->execute();
-  $result = $query->get_result();
-
-  if ($result->num_rows > 0) {
-    $user = $result->fetch_assoc();
-
-    if (password_verify($password, $user['password'])) {
-      // Store user data in session
-      $_SESSION['user_id'] = $user['id'];
-      $_SESSION['username'] = $user['username'];
-      $_SESSION['name'] = $user['name'];
-      $_SESSION['email'] = $user['email'];
-      echo "<script> alert('Du bist jetzt eingeloggt!'); </script>";
-      header("Location: profile.php");
-    } else {
-      echo "<script> alert('Falsches Passwort!'); </script>";
-    }
-  } else {
-    echo "<script> alert('Benutzername existiert nicht!'); </script>";
-  }
-
-  $query->close();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,11 +5,11 @@ if (isset($_POST["submit"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>Login to Alexifeu.com</title>
+  <title>About</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 </head>
 
-<body class="loginbody">
+<body>
   <nav class="navbar">
     <a class="fill" href="index.php"><svg
         class="fill"
@@ -79,7 +47,7 @@ if (isset($_POST["submit"])) {
       </svg>
       About
     </a>
-    <a class="fill" href="signup.php"><svg
+    <a class="fill" href="login.php"><svg
         class="fill"
         xmlns="http://www.w3.org/2000/svg"
         height="48px"
@@ -89,7 +57,7 @@ if (isset($_POST["submit"])) {
         <path
           d="M481-120v-60h299v-600H481v-60h299q24 0 42 18t18 42v600q0 24-18 42t-42 18H481Zm-55-185-43-43 102-102H120v-60h363L381-612l43-43 176 176-174 174Z" />
       </svg>
-      Signup
+      Login
     </a>
   </nav>
   <nav class="navmobile">
@@ -127,28 +95,59 @@ if (isset($_POST["submit"])) {
       </svg>
     </a>
     <a class="fill" href="signup.php">
-      <svg class="fill" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px">
+      <svg
+        class="fill"
+        xmlns="http://www.w3.org/2000/svg"
+        height="48px"
+        viewBox="0 -960 960 960"
+        width="48px">
         <defs>
-          <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f58529; stop-opacity:1" />
-            <stop offset="25%" style="stop-color:#f77737; stop-opacity:1" />
-            <stop offset="50%" style="stop-color:#d4af37; stop-opacity:1" />
-            <stop offset="75%" style="stop-color:#d45ff3; stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#9a4eff; stop-opacity:1" />
+          <linearGradient
+            id="instagramGradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%">
+            <stop offset="0%" style="stop-color: #f58529; stop-opacity: 1" />
+            <stop offset="25%" style="stop-color: #f77737; stop-opacity: 1" />
+            <stop offset="50%" style="stop-color: #d4af37; stop-opacity: 1" />
+            <stop offset="75%" style="stop-color: #d45ff3; stop-opacity: 1" />
+            <stop
+              offset="100%"
+              style="stop-color: #9a4eff; stop-opacity: 1" />
           </linearGradient>
         </defs>
-        <path d="M481-120v-60h299v-600H481v-60h299q24 0 42 18t18 42v600q0 24-18 42t-42 18H481Zm-55-185-43-43 102-102H120v-60h363L381-612l43-43 176 176-174 174Z" fill="url(#instagramGradient)" />
+        <path
+          d="M481-120v-60h299v-600H481v-60h299q24 0 42 18t18 42v600q0 24-18 42t-42 18H481Zm-55-185-43-43 102-102H120v-60h363L381-612l43-43 176 176-174 174Z"
+          fill="url(#instagramGradient)" />
       </svg>
     </a>
   </nav>
-  <h1>Login</h1>
-  <form method="post" action="" autocomplete="off">
-    <input type="text" name="username" id="username" placeholder="Username" required />
-    <input type="password" name="password" id="password" placeholder="Password" required />
-    <p class="pass">Forgot Password?</p>
-    <input type="submit" name="submit" value="Login" />
-    <p>Not a member? <a class="login" href="signup.php">Signup</a></p>
-  </form>
+  <h1>About</h1>
+  <p>Alexifeu is cool</p>
 </body>
+
+<footer>
+  <a href="http://www.wtfpl.net/" target="_blank">
+    <img src="img/wtfpl.png" alt="wtfpl" width="60" />
+  </a>
+  <p>
+    Copyright &copy 2024 Alexander Rankl alexifeu@aol.de
+    <br />
+    This work is free. You can redistribute it and/or modify it under the
+    <br />
+    terms of the Do What The Fuck You Want To Public License, Version 2,
+    <br />
+    as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+    <br />
+    All product images, names, logos and brands used on my websites
+    <br />
+    are properties of their respective owners
+    <br />
+    If you are the copyright holder of an image and believe it is being used
+    <br />
+    inappropriately, please contact me to discuss the matter.
+  </p>
+</footer>
 
 </html>
