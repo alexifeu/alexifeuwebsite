@@ -1,6 +1,7 @@
 <?php
 
-$conn = new mysqli('localhost', 'phpmyadmin', 'password', 'test');
+require 'config.php';
+require 'nav.php';
 
 if ($conn->connect_error) {
     die("Error connecting");
