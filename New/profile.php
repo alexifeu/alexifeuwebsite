@@ -1,6 +1,8 @@
+<?php
+require 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require 'config.php'; ?>
 
 <head>
     <meta charset="UTF-8" />
@@ -11,8 +13,24 @@
 </head>
 
 <body>
-    <?php require 'nav.php'; ?>
-    <h1>Profile</h1>
-    <p>You are now logged in</p>
+    <?php
+    require 'nav.php';
+    if (isset($_SESSION['user_id'])) {
+        $username = $_SESSION['username'];
+        echo "<h1>Welcome, " . htmlspecialchars($username) . "!<h1>";
+    } else {
+        echo "<p>You are not logged in. <a href='login.php'>Login here</a></p>";
+    }
+    echo "<form action='' method='post'>
+    <button type='submit' name='logout'>Logout</button>
+    </form>";
+
+    if (isset($_POST['logout'])) {
+        session_unset();
+        session_destroy();
+        header("Location: login.php");
+        exit();
+    }
+    ?>
 
 </html>

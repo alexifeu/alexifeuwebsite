@@ -13,7 +13,6 @@ if (isset($_POST["submit"])) {
     $user = $result->fetch_assoc();
 
     if (password_verify($password, $user['password'])) {
-      // Store user data in session
       $_SESSION['user_id'] = $user['id'];
       $_SESSION['username'] = $user['username'];
       $_SESSION['name'] = $user['name'];

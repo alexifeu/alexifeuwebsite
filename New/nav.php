@@ -48,8 +48,8 @@
             </svg>
             Signup
         </a>
-    <?php else: ?>
-        <a class="fill" href="login.php"><svg
+    <?php elseif (isset($_SESSION['user_id'])): ?>
+        <a class="fill" href="profile.php"><svg
                 class="fill"
                 xmlns="http://www.w3.org/2000/svg"
                 height="48px"
@@ -57,9 +57,19 @@
                 width="48px"
                 fill="#e8eaed">
                 <path
-                    d="M481-120v-60h299v-600H481v-60h299q24 0 42 18t18 42v600q0 24-18 42t-42 18H481Zm-55-185-43-43 102-102H120v-60h363L381-612l43-43 176 176-174 174Z" />
+                    d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5t127.92 44.69q31.3 14.13 50.19 40.97Q800-292 800-254v94H160Zm60-60h520v-34q0-16-9.5-30.5T707-306q-64-31-117-42.5T480-360q-57 0-111 11.5T252-306q-14 7-23 21.5t-9 30.5v34Zm260-321q39 0 64.5-25.5T570-631q0-39-25.5-64.5T480-721q-39 0-64.5 25.5T390-631q0 39 25.5 64.5T480-541Zm0-90Zm0 411Z" />
             </svg>
-            Login
+            Profile
+        </a>
+    <?php else: ?>
+        <a class="fill" href="login.php">
+            <svg class="fill"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48px"
+                viewBox="0 -960 960 960"
+                width="48px">
+                <path d="M481-120v-60h299v-600H481v-60h299q24 0 42 18t18 42v600q0 24-18 42t-42 18H481Zm-55-185-43-43 102-102H120v-60h363L381-612l43-43 176 176-174 174Z" />
+            </svg>
         </a>
     <?php endif; ?>
 </nav>
@@ -99,7 +109,11 @@
     </a>
     <?php if (basename($_SERVER['PHP_SELF']) == 'login.php'): ?>
         <a class="fill" href="signup.php">
-            <svg class="fill" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px">
+            <svg class="fill"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48px"
+                viewBox="0 -960 960 960"
+                width="48px">
                 <defs>
                     <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:#f58529; stop-opacity:1" />
@@ -112,9 +126,25 @@
                 <path d="M481-120v-60h299v-600H481v-60h299q24 0 42 18t18 42v600q0 24-18 42t-42 18H481Zm-55-185-43-43 102-102H120v-60h363L381-612l43-43 176 176-174 174Z" fill="url(#instagramGradient)" />
             </svg>
         </a>
+    <?php elseif (isset($_SESSION['user_id'])): ?>
+        <a class="fill" href="profile.php">
+            <svg class="fill"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48px"
+                viewBox="0 -960 960 960"
+                width="48px"
+                fill="#e8eaed">
+                <path
+                    d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5t127.92 44.69q31.3 14.13 50.19 40.97Q800-292 800-254v94H160Zm60-60h520v-34q0-16-9.5-30.5T707-306q-64-31-117-42.5T480-360q-57 0-111 11.5T252-306q-14 7-23 21.5t-9 30.5v34Zm260-321q39 0 64.5-25.5T570-631q0-39-25.5-64.5T480-721q-39 0-64.5 25.5T390-631q0 39 25.5 64.5T480-541Zm0-90Zm0 411Z" />
+            </svg>
+        </a>
     <?php else: ?>
         <a class="fill" href="login.php">
-            <svg class="fill" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px">
+            <svg class="fill"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48px"
+                viewBox="0 -960 960 960"
+                width="48px">
                 <defs>
                     <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:#f58529; stop-opacity:1" />
@@ -128,4 +158,5 @@
             </svg>
         </a>
     <?php endif; ?>
+
 </nav>
