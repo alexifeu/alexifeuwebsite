@@ -1,6 +1,3 @@
-:root {
-  color-scheme: light dark;
-}
 @font-face {
   font-family: "Chalet New York 1970";
   src: url("../fonts/Chalet NewYorkNineteenSeventy Regular.otf")
@@ -8,12 +5,13 @@
   font-weight: normal;
   font-style: normal;
 }
-.mlg {
-  font-family: "Chalet NewYorkNineteenSeventy", sans-serif;
-  font-size: 10vw;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 0px;
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 body {
@@ -25,6 +23,77 @@ body {
   height: 100vh;
   background-color: light-dark(#fff, #444);
   color: light-dark(#444, #fff);
+}
+
+h1 {
+  margin-top: 69px;
+}
+
+.mlg {
+  font-family: "Chalet NewYorkNineteenSeventy", sans-serif;
+  font-size: 10vw;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 900px;
+  width: 90%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.7) 0%,
+    rgba(118, 75, 162, 0.7) 100%
+  );
+  color: white;
+  fill: white;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(5px);
+}
+
+.navbar a:hover {
+  color: navy;
+  fill: navy;
+}
+
+.navmobile {
+  display: none;
+}
+
+@media screen and (max-width: 560px) {
+  .navbar {
+    display: none !important;
+  }
+  img {
+    width: 80%;
+  }
+  .navmobile {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(
+      135deg,
+      rgba(102, 126, 234, 0.7) 0%,
+      rgba(118, 75, 162, 0.7) 100%
+    );
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    justify-content: space-between;
+    z-index: 1000;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -40,47 +109,7 @@ body {
     background-color: black;
   }
 }
-.navmobile {
-  display: none;
-}
-@media screen and (max-width: 560px) {
-  .navbar {
-    display: none !important;
-  }
-  img {
-    width: 80%;
-  }
-  .navmobile {
-    display: flex;
-  }
-}
-html {
-  overflow-y: scroll;
-}
-footer {
-  width: 100%;
-  padding: 10px 0;
-  text-align: center;
-  position: relative;
-}
-h1 {
-  margin-top: 69px;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  max-width: 900px;
-  width: 90%;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0 auto;
-  border-radius: 30px;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  fill: white;
-}
+
 a {
   font-size: 40px;
   color: var(--fg);
@@ -90,15 +119,18 @@ a {
   transition: width 0.3s ease;
   text-align: center;
 }
+
 .login:hover {
   text-decoration: underline;
 }
+
 .loginbody {
   margin: 0;
   padding: 0;
   height: 100vh;
   background: linear-gradient(120deg, #2980b9, #8e44ad);
 }
+
 input {
   border-radius: 25px;
   background-color: #bdc1c6;
@@ -106,10 +138,7 @@ input {
   width: 150px;
   border: none;
 }
-.navbar a:hover {
-  color: navy;
-  fill: navy;
-}
+
 input[type="submit"] {
   background-image: linear-gradient(
     to right,
@@ -129,22 +158,27 @@ input[type="submit"] {
   margin: auto;
   width: auto;
 }
+
 input[type="submit"]:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
 }
+
 .top {
   margin-top: 100px;
 }
+
 .contact {
   font-size: 20px;
   text-decoration: underline;
 }
+
 svg {
   fill: var(--fg);
   vertical-align: middle;
 }
+
 video {
   position: fixed;
   right: 0;
@@ -153,14 +187,24 @@ video {
   min-height: 100%;
   z-index: -1;
 }
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background: #525252;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: darkgray;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
 }

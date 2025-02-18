@@ -18,18 +18,17 @@ require 'config.php';
     if (isset($_SESSION['user_id'])) {
         $username = $_SESSION['username'];
         echo "<h1>Welcome, " . htmlspecialchars($username) . "!<h1>";
-    } else {
-        echo "<p>You are not logged in. <a href='login.php'>Login here</a></p>";
-    }
-    echo "<form action='' method='post'>
-    <button type='submit' name='logout'>Logout</button>
-    </form>";
+        echo "<form action='' method='post'>
+        <button type='submit' name='logout'>Logout</button>
+        </form>";
 
-    if (isset($_POST['logout'])) {
-        session_unset();
-        session_destroy();
-        header("Location: login.php");
-        exit();
+        if (isset($_POST['logout'])) {
+            session_unset();
+            session_destroy();
+            exit();
+        }
+    } else {
+        echo "<p>You are not logged in. <a class=\"login\" href='login.php'>Login here</a></p>";
     }
     ?>
 
