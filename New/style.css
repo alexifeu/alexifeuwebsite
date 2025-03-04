@@ -24,6 +24,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   box-sizing: border-box;
   min-height: 100%;
   background-color: light-dark(#fff, #444);
@@ -98,6 +99,18 @@ h1 {
     border-radius: 15px;
     justify-content: space-between;
     z-index: 1000;
+  }
+}
+
+@media (min-height: 500px) {
+  body {
+    overflow: auto;
+  }
+}
+
+@media (min-height: 100vh) {
+  body {
+    overflow: auto;
   }
 }
 
