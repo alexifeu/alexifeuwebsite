@@ -19,6 +19,7 @@ require 'config.php';
   <p>
     <a class="contact" href="mailto:Alexifeu@aol.com">Alexifeu@aol.com</a>
   </p>
+  <?php include('footer.php'); ?>
 </body>
 
 </html>

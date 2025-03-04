@@ -116,7 +116,7 @@ require 'config.php';
       <img src="img/obey.png" alt="Obey" width="400" />
     </a>
     <p>I paid way too much shipping</p>
-    <?php include('footer.html'); ?>
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

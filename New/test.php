@@ -40,3 +40,4 @@ $conn->close();
     <h2>Dark</h2>
     <p>This section will be dark due to the <code>color-scheme: dark;</code>.</p>
 </section>
+<?php include('footer.php'); ?>

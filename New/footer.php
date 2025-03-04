@@ -1,7 +1,18 @@
-<!-- footer.html -->
-<footer class="footer">
-  <div class="footer-content">
-    <p>Footer Content - This can be any information you want to display.</p>
-    <p>Example: &copy; 2025 Your Website</p>
+<footer>
+  <div class="top-section">
+    <div><a href="#">Germany</a></div>
+  </div>
+  <div class="divider"></div>
+  <div class="bottom-section">
+    <div>
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+      <a href="#">How Search Works</a>
+    </div>
+    <div>
+      <a href="privacy.php">Privacy</a>
+      <a href="privacy.php">Terms</a>
+      <a href="#">Settings</a>
+    </div>
   </div>
 </footer>
