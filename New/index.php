@@ -103,7 +103,7 @@ require 'config.php';
     <a href="https://www.elgato.com/" target="_blank">
       <img src="img/Elgato.webp" alt="Elgato" width="400" />
     </a>
-    <p>Scuf Gaming</p>
+    <p>Elgato Gaming</p>
     <a href="https://www.logitechg.com/de-de/collections/astro-series.html" target="_blank">
       <img src="img/astro.png" alt="Astro Gaming" width="400" />
     </a>

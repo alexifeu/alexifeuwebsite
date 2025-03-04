@@ -209,6 +209,7 @@ video {
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 footer {
   background-color: #171717;
+  padding: 10px 0;
 }
 
 footer .divider {
@@ -224,6 +225,7 @@ footer .bottom-section {
   height: 47px;
   padding: 0 30px;
 }
+
 footer .top-section {
   padding: 0 28px;
 }
@@ -248,4 +250,34 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 560px) {
+  footer .top-section,
+  footer .bottom-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  footer .top-section div,
+  footer .bottom-section div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  footer .bottom-section div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  footer a {
+    font-size: 14px;
+    flex: 1 1 calc(33% - 10px);
+    text-align: center;
+  }
 }
