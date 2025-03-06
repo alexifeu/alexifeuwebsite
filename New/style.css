@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
 @font-face {
   font-family: "Chalet New York 1970";
   src: url("../fonts/Chalet NewYorkNineteenSeventy Regular.otf")
@@ -219,7 +221,7 @@ video {
 ::-webkit-scrollbar-thumb:hover {
   background: darkgray;
 }
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
 footer {
   background-color: #171717;
   padding: 10px 0;
