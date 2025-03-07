@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 
 @font-face {
-  font-family: "Chalet New York 1970";
-  src: url("../fonts/Chalet NewYorkNineteenSeventy Regular.otf")
+  font-family: "Chalet NewYorkNineteenSeventy";
+  src: url("../fonts/ChaletNewYorkNineteenSeventyRegular.otf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -41,7 +41,7 @@ h1 {
   font-family: "Chalet NewYorkNineteenSeventy", sans-serif;
   font-size: 10vw;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 11px;
   padding-bottom: 0px;
 }
 
@@ -131,7 +131,6 @@ h1 {
 }
 
 a {
-  font-size: 40px;
   color: var(--fg);
   text-decoration: none;
   flex: 1;
@@ -206,6 +205,24 @@ video {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+}
+
+.rainbow {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #00ff00,
+    #0000ff,
+    #8b00ff
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 ::-webkit-scrollbar {
