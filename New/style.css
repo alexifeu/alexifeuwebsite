@@ -290,14 +290,14 @@ footer a:hover {
   footer .bottom-section {
     flex-direction: column;
     align-items: flex-start;
+    overflow: hidden;
     padding: 0 20px;
   }
 
-  footer .top-section div,
-  footer .bottom-section div {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
+  footer .top-section div > *,
+  footer .bottom-section div > * {
+    flex: 1 1 calc(33.333% - 10px);
+    text-align: center;
   }
 
   footer .bottom-section div {
@@ -309,7 +309,5 @@ footer a:hover {
 
   footer a {
     font-size: 14px;
-    flex: 1 1 calc(33% - 10px);
-    text-align: center;
   }
 }
