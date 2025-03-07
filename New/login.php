@@ -48,7 +48,7 @@ if (isset($_POST["submit"])) {
     <input type="password" name="password" id="password" placeholder="Password" required />
     <p class="pass">Forgot Password?</p>
     <input type="submit" name="submit" value="Login" />
-    <p>Not a member? <a class="login" href="signup.php">Signup</a></p>
+    <p>Not a member? <a class="login" href="/signup">Signup</a></p>
   </form>
 </body>
 

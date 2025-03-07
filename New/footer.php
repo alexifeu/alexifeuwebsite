@@ -10,8 +10,8 @@
       <a href="#">How Search Works</a>
     </div>
     <div>
-      <a href="privacy.php">Privacy</a>
-      <a href="privacy.php">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/privacy">Terms</a>
       <a href="#">Settings</a>
     </div>
   </div>

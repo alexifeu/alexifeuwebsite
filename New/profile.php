@@ -28,7 +28,7 @@ require 'config.php';
             exit();
         }
     } else {
-        echo "<p>You are not logged in. <a class=\"login\" href='login.php'>Login here</a></p>";
+        echo "<p>You are not logged in. <a class=\"login\" href='/login'>Login here</a></p>";
     }
     ?>
 

@@ -19,7 +19,7 @@ require 'config.php';
     page not found m8
   </h1>
   <h1>Sorry, the page you are looking for is not available.</h1>
-  <h1><a href="index.php">Click Here</a>to get to the Homepage</h1>
+  <h1><a href="/index">Click Here</a>to get to the Homepage</h1>
   <audio src="audio/Sad Violin.mp3"></audio>
   <?php include('footer.php'); ?>
 </body>

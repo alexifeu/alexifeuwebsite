@@ -85,7 +85,7 @@ if (isset($_POST["submit"])) {
       required />
     <p class="pass">Forgot Password?</p>
     <input type="submit" name="submit" value="Get Started" />
-    <p>Already a member? <a class="login" href="login.php">Login</a></p>
+    <p>Already a member? <a class="login" href="/login">Login</a></p>
   </form>
 </body>
 

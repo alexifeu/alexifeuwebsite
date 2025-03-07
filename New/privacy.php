@@ -50,7 +50,7 @@ require 'config.php';
 
     <p>You have the right to manage your data and privacy preferences.</p>
 
-    <p>If you wish to delete your data, you can request it by contacting us at <a href="contact.php">contact.php</a>.</p>
+    <p>If you wish to delete your data, you can request it by contacting us <a href="/contact">here</a>.</p>
 
     <h2>Compliance with European Regulations</h2>
 
@@ -58,7 +58,7 @@ require 'config.php';
 
     <h2>Contact Us</h2>
 
-    <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="contact.php">contact.php</a>.</p>
+    <p>If you have any questions or concerns about this Privacy Policy, please contact us <a href="/contact">here</a>.</p>
 
     <?php include('footer.php'); ?>
 </body>
