@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
 @font-face {
   font-family: "Chalet New York 1970";
   src: url("../fonts/Chalet NewYorkNineteenSeventy Regular.otf")
@@ -24,6 +26,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   box-sizing: border-box;
   min-height: 100%;
   background-color: light-dark(#fff, #444);
@@ -98,6 +101,18 @@ h1 {
     border-radius: 15px;
     justify-content: space-between;
     z-index: 1000;
+  }
+}
+
+@media (min-height: 500px) {
+  body {
+    overflow: auto;
+  }
+}
+
+@media (min-height: 100vh) {
+  body {
+    overflow: auto;
   }
 }
 
@@ -206,7 +221,7 @@ video {
 ::-webkit-scrollbar-thumb:hover {
   background: darkgray;
 }
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
 footer {
   background-color: #171717;
   padding: 10px 0;
