@@ -7,6 +7,11 @@ require 'config.php';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to Alexifeu, the official website of Alexander Rankl. Explore cool content and more!" />
+  <meta name="keywords" content="Alexifeu, Alexander Rankl, official website, homepage, cool content, digital platform" />
+  <meta property="og:title" content="Alexifeu - Official Website" />
+  <meta property="og:description" content="Discover the world of Alexifeu, where creativity, innovation, and cool vibes meet." />
+  <meta property="og:image" content="path/to/image.jpg" />
   <link rel="stylesheet" href="style.css" />
   <title>Alexifeu</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />

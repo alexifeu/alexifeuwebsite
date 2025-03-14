@@ -2,17 +2,14 @@
 require 'config.php';
 
 if (isset($_POST["submit"])) {
-  // Eingaben aus dem Formular abrufen
   $name = $_POST['name'];
   $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
   $confirmpassword = $_POST['confirmpassword'];
 
-  // Passwort verschlüsseln
   $pw_hashed = password_hash($password, PASSWORD_BCRYPT);
 
-  // Überprüfen, ob Benutzername oder E-Mail bereits existieren
   $duplicateQuery = "SELECT * FROM users WHERE username = ? OR email = ?";
   $duplicateStmt = $conn->prepare($duplicateQuery);
   $duplicateStmt->bind_param("ss", $username, $email);
@@ -22,9 +19,7 @@ if (isset($_POST["submit"])) {
   if ($result->num_rows > 0) {
     echo "<script> alert('Username oder Email ist bereits vergeben!'); </script>";
   } else {
-    // Überprüfen, ob die Passwörter übereinstimmen
     if ($password === $confirmpassword) {
-      // Benutzer in die Datenbank einfügen
       $insertQuery = "INSERT INTO users (name, username, email, password) VALUES (?, ?, ?, ?)";
       $insertStmt = $conn->prepare($insertQuery);
       $insertStmt->bind_param("ssss", $name, $username, $email, $pw_hashed);
@@ -37,7 +32,6 @@ if (isset($_POST["submit"])) {
     }
   }
 
-  // Ressourcen schließen
   $duplicateStmt->close();
 }
 ?>
@@ -48,6 +42,11 @@ if (isset($_POST["submit"])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sign up for Alexifeu to join the community and get access to exclusive content, features, and updates." />
+  <meta name="keywords" content="signup, create account, join Alexifeu, exclusive content, sign up for Alexifeu" />
+  <meta property="og:title" content="Sign Up - Alexifeu" />
+  <meta property="og:description" content="Become a part of Alexifeu by signing up for an account today. Get access to exclusive content and enjoy a personalized experience." />
+  <meta property="og:image" content="path/to/image.jpg" />
   <link rel="stylesheet" href="style.css" />
   <title>Signup to Alexifeu.com</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />

@@ -2,75 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://alexifeu.com/index.php</loc>
+    <loc>https://alexifeu.com/index</loc>
     <lastmod>2025-02-10</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://alexifeu.com/about.php</loc>
+    <loc>https://alexifeu.com/about</loc>
     <lastmod>2025-02-10</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alexifeu.com/contact.php</loc>
+    <loc>https://alexifeu.com/contact</loc>
     <lastmod>2025-02-10</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alexifeu.com/signup.php</loc>
+    <loc>https://alexifeu.com/privacy</loc>
     <lastmod>2025-02-10</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alexifeu.com/profile.php</loc>
+    <loc>https://alexifeu.com/sitemap</loc>
     <lastmod>2025-02-10</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://alexifeu.com/login.php</loc>
+    <loc>https://alexifeu.com/404</loc>
     <lastmod>2025-02-10</lastmod>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://alexifeu.com/style.css</loc>
+    <loc>https://alexifeu.com/login</loc>
     <lastmod>2025-02-10</lastmod>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://alexifeu.com/test.css</loc>
+    <loc>https://alexifeu.com/signup</loc>
     <lastmod>2025-02-10</lastmod>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://alexifeu.com/test.html</loc>
-    <lastmod>2025-02-10</lastmod>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://alexifeu.com/test.php</loc>
-    <lastmod>2025-02-10</lastmod>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://alexifeu.com/img/</loc>
-    <lastmod>2025-02-10</lastmod>
-    <priority>0.2</priority>
-  </url>
-
-  <url>
-    <loc>https://alexifeu.com/README.md</loc>
-    <lastmod>2025-02-10</lastmod>
-    <priority>0.1</priority>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

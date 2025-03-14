@@ -7,6 +7,11 @@ require 'config.php';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn more about Alexifeu and the creative mind behind it – Alexander Rankl. Discover the story, values, and mission." />
+  <meta name="keywords" content="about Alexifeu, Alexander Rankl, about the creator, website story, mission" />
+  <meta property="og:title" content="About Alexifeu - The Story Behind the Website" />
+  <meta property="og:description" content="Get to know the vision and values of Alexifeu, founded by Alexander Rankl. Learn what makes this site unique." />
+  <meta property="og:image" content="path/to/image.jpg" />
   <link rel="stylesheet" href="style.css" />
   <title>About</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
@@ -16,26 +21,26 @@ require 'config.php';
   <?php require 'nav.php'; ?>
   <h1>About</h1>
   <p>Alexifeu is cool</p>
-</body>
 
-<div class="footer-content">
-  <a href="http://www.wtfpl.net/" target="_blank">
-    <img src="img/wtfpl.png" alt="WTFPL" width="60" />
-  </a>
-  <div class="footer-text">
-    <p>
-      <strong>Copyright &copy; 2025 Alexander Rankl</strong><br />
-      <a href="mailto:alexifeu@aol.com">alexifeu@aol.com</a><br />
-      This work is free. You can redistribute it and/or modify it under the<br />
-      terms of the <strong>Do What The Fuck You Want To Public License, Version 2</strong>,<br />
-      as published by Sam Hocevar. See <a href="http://www.wtfpl.net/" target="_blank">wtfpl.net</a> for more details.<br />
-      All product images, names, logos, and brands used on my websites<br />
-      are properties of their respective owners.<br />
-      If you are the copyright holder of an image and believe it is being used<br />
-      inappropriately, please <a href="mailto:alexifeu@aol.de">contact me</a> to discuss the matter.
-    </p>
+  <div class="footer-content">
+    <a href="http://www.wtfpl.net/" target="_blank">
+      <img src="img/wtfpl.png" alt="WTFPL" width="60" />
+    </a>
+    <div class="footer-text">
+      <p>
+        <strong>Copyright &copy; 2025 Alexander Rankl</strong><br />
+        <a href="mailto:alexifeu@aol.com">alexifeu@aol.com</a><br />
+        This work is free. You can redistribute it and/or modify it under the<br />
+        terms of the <strong>Do What The Fuck You Want To Public License, Version 2</strong>,<br />
+        as published by Sam Hocevar. See <a href="http://www.wtfpl.net/" target="_blank">wtfpl.net</a> for more details.<br />
+        All product images, names, logos, and brands used on my websites<br />
+        are properties of their respective owners.<br />
+        If you are the copyright holder of an image and believe it is being used<br />
+        inappropriately, please <a href="mailto:alexifeu@aol.de">contact me</a> to discuss the matter.
+      </p>
+    </div>
   </div>
-</div>
-<?php include('footer.php'); ?>
+  <?php include('footer.php'); ?>
+</body>
 
 </html>

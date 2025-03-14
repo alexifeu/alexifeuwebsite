@@ -35,6 +35,11 @@ if (isset($_POST["submit"])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Log in to your Alexifeu account to access exclusive content, features, and personalized experiences." />
+  <meta name="keywords" content="login, Alexifeu login, user account, exclusive content, personalized features" />
+  <meta property="og:title" content="Login - Alexifeu" />
+  <meta property="og:description" content="Access your Alexifeu account by logging in. Unlock exclusive content and features by signing into your profile." />
+  <meta property="og:image" content="path/to/image.jpg" />
   <link rel="stylesheet" href="style.css" />
   <title>Login to Alexifeu.com</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />

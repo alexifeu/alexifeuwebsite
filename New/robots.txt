@@ -2,20 +2,29 @@ User-agent: *
 Allow: /index.php
 Allow: /about.php
 Allow: /contact.php
+Allow: /privacy.php
+Allow: /404.php
+Allow: /login.php
 Allow: /signup.php
-Allow: /profile.php
-Allow: /style.css
-Disallow: /test.css
-Disallow: /test.php
-Disallow: /test.html
-Disallow: /img/
-Disallow: /*?*
-Disallow: /login.php
+Allow: /audio/
+Allow: /fonts/
+Allow: /img/
+Allow: /sitemap.xml
 
-# Shoutout to last.fm
-Disallow: /harming/humans
-Disallow: /ignoring/human/orders
-Disallow: /harm/to/self
+Disallow: /vendor/
+Disallow: /vendor/composer/
+Disallow: /vendor/graham-campbell/
+Disallow: /vendor/phpoption/
+Disallow: /vendor/symfony/
+Disallow: /vendor/vlucas/
+Disallow: /config.php
+Disallow: /profile.php
+Disallow: /nav.php
+Disallow: /footer.php
+Disallow: /test.php
+Disallow: /*.env
+Disallow: /*.json
+Disallow: /*.csv
 
 User-agent: ChatGPT
 Disallow: /
@@ -62,6 +71,24 @@ Disallow: /
 User-agent: NeevaAI
 Disallow: /
 
+User-agent: ChatGPT-4
+Disallow: /
+
+User-agent: BingAI
+Disallow: /
+
+User-agent: YouChat
+Disallow: /
+
+User-agent: ChatSonic
+Disallow: /
+
+User-agent: FacebookExternalHit
+Disallow: /
+
+User-agent: Twitterbot
+Disallow: /
+
 User-agent: ia_archiver
 Allow: /
 
@@ -104,6 +131,13 @@ Allow: /
 User-agent: AhrefsBot
 Allow: /
 
-Crawl-delay: 5
+# Shoutout to last.fm
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders
+Disallow: /harm/to/self
+
+Allow: /
 
 Sitemap: https://alexifeu.com/sitemap.xml
+
+Crawl-delay: 5
