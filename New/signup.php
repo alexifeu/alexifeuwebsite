@@ -8,16 +8,20 @@ if (isset($_POST["submit"])) {
   $password = $_POST['password'];
   $confirmpassword = $_POST['confirmpassword'];
 
+  if (!preg_match("/[A-Z]/", $password) || !preg_match("/[0-9]/", $password)) {
+    echo "<h3 class='alert'>Password must contain at least one uppercase letter and one number.</h3>";
+  }
+
   $pw_hashed = password_hash($password, PASSWORD_BCRYPT);
 
-  // Check if the username or email already exists
+
   $duplicateQuery = "SELECT * FROM users WHERE username = ? OR email = ?";
   $duplicateStmt = $conn->prepare($duplicateQuery);
   $duplicateStmt->bind_param("ss", $username, $email);
   $duplicateStmt->execute();
   $duplicateResult = $duplicateStmt->get_result();
 
-  // Handle the case if username or email already exists
+
   if ($duplicateResult->num_rows > 0) {
     $duplicateRow = $duplicateResult->fetch_assoc();
     if ($duplicateRow['username'] == $username) {
@@ -26,7 +30,7 @@ if (isset($_POST["submit"])) {
       echo "<h3 class='alert'>This email is already registered.</h3>";
     }
   } else {
-    // Check if passwords match before inserting
+
     if ($password === $confirmpassword) {
       $insertQuery = "INSERT INTO users (name, username, email, password) VALUES (?, ?, ?, ?)";
       $insertStmt = $conn->prepare($insertQuery);

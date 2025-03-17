@@ -34,12 +34,12 @@ body {
 }
 section {
   margin: 0 auto;
-  text-align: left; /* geändert von left zu left */
+  text-align: left;
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Hinzugefügt für vertikale Anordnung */
-  justify-content: center; /* Hinzugefügt für horizontale Zentrierung */
-  align-items: left; /* Hinzugefügt für vertikale Zentrierung */
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
 h1 {
   margin-top: 69px;
