@@ -17,13 +17,13 @@ if (isset($_POST["submit"])) {
       $_SESSION['username'] = $user['username'];
       $_SESSION['name'] = $user['name'];
       $_SESSION['email'] = $user['email'];
-      echo "<script> alert('Du bist jetzt eingeloggt!'); </script>";
       header("Location: profile.php");
+      exit;
     } else {
-      echo "<script> alert('Falsches Passwort!'); </script>";
+      echo "<h3 class=alert>Wrong Password</h3>";
     }
   } else {
-    echo "<script> alert('Benutzername existiert nicht!'); </script>";
+    echo "<h2 class=alert>Username doesn't exist!</h2>";
   }
 
   $query->close();

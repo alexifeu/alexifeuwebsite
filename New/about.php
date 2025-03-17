@@ -20,8 +20,6 @@ require 'config.php';
 <body>
   <?php require 'nav.php'; ?>
   <h1>About</h1>
-  <p>Alexifeu is cool</p>
-
   <div class="footer-content">
     <a href="http://www.wtfpl.net/" target="_blank">
       <img src="img/wtfpl.png" alt="WTFPL" width="60" />

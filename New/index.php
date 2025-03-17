@@ -23,13 +23,11 @@ require 'config.php';
     <img class="top" src="img/Mlg.png" alt="MLG Pro" width="600" />
   </a>
   <h1>Welcome to Alexifeu.com</h1>
-
   <h1>It is all you could ever want;</h1>
   <h2>
     Doritos, Mountain Dew, Weed, Pokémon, Chuck Norris, Dubstep, Illuminati,<br />
     FaZe Clan, OpTic Gaming, MLG Montages, Swag, Sanic, Cats, 360 Noscopes,<br />
     Epic moments, Sample Texts, Fun, Legends, Memes, and everything you love!
-
   </h2>
   <p>All images are clickable links</p>
   <a href="https://youtu.be/P9IL8fHTvgk?si=-oQY-Ga3uxJmIOgp" target="_blank">
