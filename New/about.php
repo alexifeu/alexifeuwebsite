@@ -13,31 +13,32 @@ require 'config.php';
   <meta property="og:description" content="Get to know the vision and values of Alexifeu, founded by Alexander Rankl. Learn what makes this site unique." />
   <meta property="og:image" content="path/to/image.jpg" />
   <link rel="stylesheet" href="style.css" />
-  <title>About</title>
+  <title>About Us</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 </head>
 
 <body>
   <?php require 'nav.php'; ?>
-  <h1>About</h1>
-  <div class="footer-content">
-    <a href="http://www.wtfpl.net/" target="_blank">
-      <img src="img/wtfpl.png" alt="WTFPL" width="60" />
-    </a>
-    <div class="footer-text">
-      <p>
-        <strong>Copyright &copy; 2025 Alexander Rankl</strong><br />
-        <a href="mailto:alexifeu@aol.com">alexifeu@aol.com</a><br />
-        This work is free. You can redistribute it and/or modify it under the<br />
-        terms of the <strong>Do What The Fuck You Want To Public License, Version 2</strong>,<br />
-        as published by Sam Hocevar. See <a href="http://www.wtfpl.net/" target="_blank">wtfpl.net</a> for more details.<br />
-        All product images, names, logos, and brands used on my websites<br />
-        are properties of their respective owners.<br />
-        If you are the copyright holder of an image and believe it is being used<br />
-        inappropriately, please <a href="mailto:alexifeu@aol.de">contact me</a> to discuss the matter.
-      </p>
-    </div>
-  </div>
+  <h1>About Us</h1>
+  <a href="http://www.wtfpl.net/" target="_blank">
+    <img src="img/wtfpl.png" alt="WTFPL" width="143" />
+  </a>
+  <p>
+  <h1>About Us</h1>
+  <h2>Welcome to Alexifeu.com</h2>
+  <p>The ultimate spot where gaming, memes, epic moments, and everything that makes the internet awesome come together.</p>
+  <p>Our mission is simple: to bring fun, creativity, and nostalgia together in one place.</p>
+  <p>Founded by Alexander Rankl, Alexifeu celebrates the best of internet culture in all its forms.</p>
+  <hr>
+  <p><strong>Copyright &copy; 2025 Alexander Rankl</strong></p>
+  <p><a href="mailto:alexifeu@aol.com">alexifeu@aol.com</a></p>
+  <p>This work is free. You can redistribute it and/or modify it under the</p>
+  <p>terms of the <strong>Do What The Fuck You Want To Public License, Version 2</strong>,</p>
+  <p>as published by Sam Hocevar. See <a href="http://www.wtfpl.net/" target="_blank">wtfpl.net</a> for more details.</p>
+  <p>All product images, names, logos, and brands used on my websites</p>
+  <p>are properties of their respective owners.</p>
+  <p>If you are the copyright holder of an image and believe it is being used</p>
+  <p>inappropriately, please <a class="legal" href="/contact">contact me</a> to discuss the matter.</p>
   <?php include('footer.php'); ?>
 </body>
 

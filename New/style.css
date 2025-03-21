@@ -93,7 +93,11 @@ h1 {
     display: none !important;
   }
   img {
-    width: 80%;
+    img {
+      max-width: 700px;
+      min-width: 200px;
+      width: 100%;
+    }
   }
   .navmobile {
     display: flex;
@@ -194,6 +198,16 @@ section {
   display: flex;
   justify-content: center; /* Hinzugefügt für horizontale Zentrierung */
   align-items: center; /* Hinzugefügt für vertikale Zentrierung */
+}
+
+.legal {
+  color: #3399ff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.legal:hover {
+  color: #ff6600;
+  text-decoration: underline;
+  transform: scale(1.1);
 }
 
 .top {

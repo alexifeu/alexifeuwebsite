@@ -20,13 +20,13 @@
     <main>
         <h1>Sitemap</h1>
         <ul>
-            <li><a href="/index">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/privacy">Privacy</a></li>
-            <li><a href="/sitemap">Sitemap</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/signup">Signup</a></li>
+            <li><a class="legal" href="/index">Home</a></li>
+            <li><a class="legal" href="/about">About</a></li>
+            <li><a class="legal" href="/contact">Contact</a></li>
+            <li><a class="legal" href="/privacy">Privacy</a></li>
+            <li><a class="legal" href="/sitemap">Sitemap</a></li>
+            <li><a class="legal" href="/login">Login</a></li>
+            <li><a class="legal" href="/signup">Signup</a></li>
         </ul>
     </main>
 

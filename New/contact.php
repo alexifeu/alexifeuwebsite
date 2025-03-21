@@ -20,9 +20,13 @@ require 'config.php';
 <body>
   <?php require 'nav.php'; ?>
   <h1>Contact</h1>
-  <img src="img/AOL.svg" alt="AOL" width="400" />
+  <a href="mailto:alexifeu@aol.com">
+    <img src="img/AOL.svg" alt="AOL" width="400" />
+  </a>
+  <p>If you have any questions, need support, or require further assistance,</p>
+  <p>please don't hesitate to contact us.</p>
   <p>
-    <a class="contact" href="mailto:Alexifeu@aol.com">Alexifeu@aol.com</a>
+    E-Mail: <a class="contact" href="mailto:alexifeu@aol.com">alexifeu@aol.com</a>
   </p>
   <?php include('footer.php'); ?>
 </body>

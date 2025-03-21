@@ -20,51 +20,57 @@ require 'config.php';
 <body>
     <?php require 'nav.php'; ?>
     <h1>Privacy Policy</h1>
+    <p><strong>Effective Date:</strong> 21.03.2025</p>
 
-    <p><strong>Effective Date: 04.03.2025</strong></p>
-
-    <p>Welcome to Alexifeu.com. We value your privacy and are committed to protecting your personal information.</p>
+    <p>Welcome to <strong>Alexifeu.com</strong>. We value your privacy and are committed to protecting your personal information.</p>
 
     <p>This Privacy Policy explains what information we collect, why we collect it, and how you can manage and control your data.</p>
 
     <h2>Information We Collect</h2>
-
     <p>We collect information to provide better services to all our users.</p>
-
-    <p>When you register an account, we collect your name, username, email address, and a securely stored password.</p>
+    <ul>
+        <li>When you register an account, we collect your <strong>name</strong>, <strong>username</strong>, <strong>email address</strong>, and a securely stored <strong>password</strong>.</li>
+    </ul>
 
     <h2>How We Use Your Information</h2>
-
     <p>We use the collected information to create and manage your account.</p>
-
-    <p>Your name, username, email, and password are necessary for account functionality.</p>
-
-    <p>Additionally, your email address helps reset your password when needed (feature coming soon).</p>
+    <ul>
+        <li>Your <strong>name</strong>, <strong>username</strong>, <strong>email</strong>, and <strong>password</strong> are necessary for account functionality.</li>
+        <li>Additionally, your <strong>email address</strong> helps reset your password when needed (feature coming soon).</li>
+    </ul>
 
     <h2>Data Sharing</h2>
-
-    <p>We do not share your personal information with any third parties.</p>
+    <p>We do <strong>not</strong> share your personal information with any third parties.</p>
 
     <h2>Data Security</h2>
+    <p>Our website operates using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>PHP</strong>, ensuring full functionality without JavaScript.</p>
+    <p>JavaScript may be used in the future for functionalities that cannot be achieved with PHP alone.</p>
 
-    <p>Our website operates using HTML, CSS, and PHP, ensuring full functionality without JavaScript.</p>
-
-    <p>JavaScript is only used for specific notifications, such as password error messages.</p>
+    <p>We implement <strong>industry-standard security measures</strong>, including:</p>
+    <ul>
+        <li><strong>Encrypted password storage</strong></li>
+        <li><strong>Secure database handling</strong></li>
+    </ul>
+    <p>These measures help protect your personal information from <strong>unauthorized access</strong> or <strong>misuse</strong>.</p>
 
     <h2>Your Privacy Controls</h2>
-
     <p>You have the right to manage your data and privacy preferences.</p>
-
-    <p>If you wish to delete your data, you can request it by contacting us <a href="/contact">here</a>.</p>
+    <ul>
+        <li>If you wish to <strong>delete</strong> your data, you can request it by contacting us.</li>
+    </ul>
 
     <h2>Compliance with European Regulations</h2>
+    <p>We comply with applicable data protection laws, including the <strong>General Data Protection Regulation (GDPR)</strong> for European users.</p>
 
-    <p>We comply with applicable data protection laws, including the General Data Protection Regulation (GDPR) for European users.</p>
+    <p>As a user, you have the right to:</p>
+    <ul>
+        <li><strong>Access</strong>, <strong>modify</strong>, or <strong>delete</strong> your data.</li>
+        <li>Request a <strong>copy</strong> of the information we store about you.</li>
+    </ul>
+    <p>To exercise these rights, please contact us.</p>
 
-    <h2>Contact Us</h2>
-
-    <p>If you have any questions or concerns about this Privacy Policy, please contact us <a href="/contact">here</a>.</p>
-
+    <h2 id="contact">Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, please <a class="legal" href="/contact">contact us</a>.</p>
     <?php include('footer.php'); ?>
 </body>
 
