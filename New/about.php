@@ -20,25 +20,27 @@ require 'config.php';
 <body>
   <?php require 'nav.php'; ?>
   <h1>About Us</h1>
+  <h2>Welcome to Alexifeu.com</h2>
+  <p>The ultimate hub for gaming, memes, epic moments</p>
+  <p>and everything that makes the internet awesome!</p>
+  <h2>Our Mission</h2>
+  <p>We aim to bring fun, creativity, and nostalgia together in one place,</p>
+  <p>celebrating the best of internet culture in all its forms.</p>
+  <h2>Who We Are</h2>
+  <p>Founded by <strong>Alexander Rankl</strong>, Alexifeu is a passion project dedicated to</p>
+  <p>internet enthusiasts who love gaming, memes, and online culture.</p>
+  <h2>Licensing & Copyright</h2>
   <a href="http://www.wtfpl.net/" target="_blank">
     <img src="img/wtfpl.png" alt="WTFPL" width="143" />
   </a>
-  <p>
-  <h1>About Us</h1>
-  <h2>Welcome to Alexifeu.com</h2>
-  <p>The ultimate spot where gaming, memes, epic moments, and everything that makes the internet awesome come together.</p>
-  <p>Our mission is simple: to bring fun, creativity, and nostalgia together in one place.</p>
-  <p>Founded by Alexander Rankl, Alexifeu celebrates the best of internet culture in all its forms.</p>
-  <hr>
-  <p><strong>Copyright &copy; 2025 Alexander Rankl</strong></p>
-  <p><a href="mailto:alexifeu@aol.com">alexifeu@aol.com</a></p>
-  <p>This work is free. You can redistribute it and/or modify it under the</p>
-  <p>terms of the <strong>Do What The Fuck You Want To Public License, Version 2</strong>,</p>
-  <p>as published by Sam Hocevar. See <a href="http://www.wtfpl.net/" target="_blank">wtfpl.net</a> for more details.</p>
-  <p>All product images, names, logos, and brands used on my websites</p>
-  <p>are properties of their respective owners.</p>
-  <p>If you are the copyright holder of an image and believe it is being used</p>
-  <p>inappropriately, please <a class="legal" href="/contact">contact me</a> to discuss the matter.</p>
+  <p><strong>Copyright &copy; 2025 Alexander Rankl </strong><a class="legal" href="mailto:alexifeu@aol.com">alexifeu@aol.com</a></p>
+  <p>This work is <strong>free</strong>. You can redistribute it and/or modify it under the</p>
+  <p>terms of the <strong><a class="legal" href="http://www.wtfpl.net/">Do What The Fuck You Want To Public License, Version 2 (WTFPL)</a></strong>,</p>
+  <p>published by Sam Hocevar.</p>
+  <p>All product images, names, logos, and brands used on this website</p>
+  <p>are the property of their respective owners.</p>
+  <p>If you are a copyright holder and believe an image is being used inappropriately,</p>
+  <p>please <a class="legal" href="/contact">contact me</a> to discuss the matter.</p>
   <?php include('footer.php'); ?>
 </body>
 
