@@ -5,16 +5,16 @@ require 'config.php';
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Read our privacy policy to understand how Alexifeu collects, protects, and uses your personal information." />
-    <meta name="keywords" content="privacy policy, data protection, Alexifeu privacy, user data, personal information security" />
-    <meta property="og:title" content="Privacy Policy - Alexifeu" />
-    <meta property="og:description" content="Learn about Alexifeu's commitment to privacy and data protection. We take your personal information seriously." />
-    <meta property="og:image" content="path/to/image.jpg" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read our privacy policy to understand how Alexifeu collects, protects, and uses your personal information.">
+    <meta name="keywords" content="privacy policy, data protection, Alexifeu privacy, user data, personal information security">
+    <meta property="og:title" content="Privacy Policy - Alexifeu">
+    <meta property="og:description" content="Learn about Alexifeu's commitment to privacy and data protection. We take your personal information seriously.">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="stylesheet" href="style.css">
     <title>Privacy</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>

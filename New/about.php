@@ -5,16 +5,16 @@ require 'config.php';
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn more about Alexifeu and the creative mind behind it – Alexander Rankl. Discover the story, values, and mission." />
-  <meta name="keywords" content="about Alexifeu, Alexander Rankl, about the creator, website story, mission" />
-  <meta property="og:title" content="About Alexifeu - The Story Behind the Website" />
-  <meta property="og:description" content="Get to know the vision and values of Alexifeu, founded by Alexander Rankl. Learn what makes this site unique." />
-  <meta property="og:image" content="path/to/image.jpg" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about Alexifeu and the creative mind behind it – Alexander Rankl. Discover the story, values, and mission.">
+  <meta name="keywords" content="about Alexifeu, Alexander Rankl, about the creator, website story, mission">
+  <meta property="og:title" content="About Alexifeu - The Story Behind the Website">
+  <meta property="og:description" content="Get to know the vision and values of Alexifeu, founded by Alexander Rankl. Learn what makes this site unique.">
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="stylesheet" href="style.css">
   <title>About Us</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
@@ -32,7 +32,7 @@ require 'config.php';
     <p>internet enthusiasts who love gaming, memes, and online culture.</p>
     <h2>Licensing & Copyright</h2>
     <a href="http://www.wtfpl.net/" target="_blank">
-      <img src="img/wtfpl.png" alt="WTFPL" width="50" />
+      <img src="img/wtfpl.png" alt="WTFPL" width="50">
     </a>
     <p><strong>Copyright &copy; 2025 Alexander Rankl </strong><a class="legal" href="mailto:alexifeu@aol.com">alexifeu@aol.com</a></p>
     <p>

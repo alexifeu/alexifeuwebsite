@@ -33,26 +33,26 @@ if (isset($_POST["submit"])) {
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Log in to your Alexifeu account to access exclusive content, features, and personalized experiences." />
-  <meta name="keywords" content="login, Alexifeu login, user account, exclusive content, personalized features" />
-  <meta property="og:title" content="Login - Alexifeu" />
-  <meta property="og:description" content="Access your Alexifeu account by logging in. Unlock exclusive content and features by signing into your profile." />
-  <meta property="og:image" content="path/to/image.jpg" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to your Alexifeu account to access exclusive content, features, and personalized experiences.">
+  <meta name="keywords" content="login, Alexifeu login, user account, exclusive content, personalized features">
+  <meta property="og:title" content="Login - Alexifeu">
+  <meta property="og:description" content="Access your Alexifeu account by logging in. Unlock exclusive content and features by signing into your profile.">
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="stylesheet" href="style.css">
   <title>Login to Alexifeu.com</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body class="loginbody">
   <?php require 'nav.php'; ?>
   <h1>Login</h1>
   <form method="post" action="" autocomplete="off">
-    <input type="text" name="username" id="username" placeholder="Username" required />
-    <input type="password" name="password" id="password" placeholder="Password" required />
+    <input type="text" name="username" id="username" placeholder="Username" required>
+    <input type="password" name="password" id="password" placeholder="Password" required>
     <p class="pass">Forgot Password?</p>
-    <input type="submit" name="submit" value="Login" />
+    <input type="submit" name="submit" value="Login">
     <p>Not a member? <a class="login" href="/signup">Signup</a></p>
   </form>
 </body>
