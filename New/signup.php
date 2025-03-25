@@ -8,9 +8,15 @@ if (isset($_POST["submit"])) {
   $password = $_POST['password'];
   $confirmpassword = $_POST['confirmpassword'];
 
-  if (strlen($password) < 4 || !preg_match("/[A-Z]/", $password) || !preg_match("/[0-9]/", $password)) {
-    echo "<h3 class='alert'>Password must contain at least 4 characters, one uppercase letter and one number.</h3>";
+  if (
+    strlen($password) < 8 ||
+    !preg_match("/[A-Z]/", $password) ||
+    !preg_match("/[0-9]/", $password) ||
+    !preg_match("/[!@#$%^&*(),.?\":{}|<>]/", $password)
+  ) {
+    echo "<h3 class='alert'>Password must contain at least 8 characters, one uppercase letter, one number, and one special character.</h3>";
   }
+
 
   $pw_hashed = password_hash($password, PASSWORD_BCRYPT);
 
@@ -38,7 +44,7 @@ if (isset($_POST["submit"])) {
       $insertStmt->execute();
       $insertStmt->close();
 
-      echo "<h3 class='alert'>You have successfully registered! Please proceed to login.</h3>";
+      echo "<h3 class='success'>You have successfully registered! Please proceed to login.</h3>";
     } else {
       echo "<h3 class='alert'>Passwords don't match.</h3>";
     }

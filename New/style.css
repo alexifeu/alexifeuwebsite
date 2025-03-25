@@ -270,6 +270,19 @@ li {
   color: #333333;
   border-radius: 8px;
 }
+.success {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-bottom: 2px;
+  padding: 2px;
+  background-color: rgba(144, 238, 144, 0.8);
+  color: #333333;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 560px) {
   .alert {
     top: 50%;
