@@ -24,7 +24,7 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding-top: 4rem;
   overflow-y: auto;
   overflow: hidden;
   box-sizing: border-box;
@@ -41,9 +41,7 @@ section {
   justify-content: center;
   align-items: left;
 }
-h1 {
-  margin-top: 69px;
-}
+
 .mlg {
   font-family: "Chalet NewYorkNineteenSeventy", sans-serif;
   font-size: 10vw;
@@ -93,7 +91,9 @@ h1 {
     display: none !important;
   }
   img {
+    display: block;
     width: 80%;
+    margin: 0 auto;
   }
   .navmobile {
     display: flex;
@@ -112,16 +112,21 @@ h1 {
     z-index: 1000;
   }
 }
-
 .textcontainer {
   display: block;
   width: 70%;
   max-width: 700px;
   margin: 0 auto;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: left;
 }
-
+.textcontainer img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
 @media (min-height: 500px) {
   body {
     overflow: auto;
@@ -157,7 +162,6 @@ a {
 }
 .loginbody {
   margin: 0;
-  padding: 0;
   height: 100vh;
   background: linear-gradient(120deg, #2980b9, #8e44ad);
 }
@@ -169,6 +173,12 @@ input {
   border: none;
   margin: 2px;
   padding: 10px;
+}
+input[type="checkbox"] {
+  padding: 0;
+  margin: 0;
+  background: none;
+  width: auto;
 }
 
 input[type="submit"] {
@@ -215,9 +225,6 @@ section {
   transform: scale(1.1);
 }
 
-.top {
-  margin-top: 100px;
-}
 .contact {
   font-size: 20px;
   text-decoration: underline;

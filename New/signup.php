@@ -8,8 +8,8 @@ if (isset($_POST["submit"])) {
   $password = $_POST['password'];
   $confirmpassword = $_POST['confirmpassword'];
 
-  if (!preg_match("/[A-Z]/", $password) || !preg_match("/[0-9]/", $password)) {
-    echo "<h3 class='alert'>Password must contain at least one uppercase letter and one number.</h3>";
+  if (strlen($password) < 4 || !preg_match("/[A-Z]/", $password) || !preg_match("/[0-9]/", $password)) {
+    echo "<h3 class='alert'>Password must contain at least 4 characters, one uppercase letter and one number.</h3>";
   }
 
   $pw_hashed = password_hash($password, PASSWORD_BCRYPT);
@@ -108,7 +108,11 @@ if (isset($_POST["submit"])) {
       placeholder="Confirm Password"
       id="confirmpassword"
       name="confirmpassword"
-      required />
+      required /><br />
+    <label>
+      I agree to the <a class="legal" href="/privacy" target="_blank">terms and conditions</a>
+      <input type="checkbox" id="termsCheckbox" required>
+    </label>
     <p class="pass">Forgot Password?</p>
     <input type="submit" name="submit" value="Get Started" />
     <p>Already a member? <a class="login" href="/login">Login</a></p>

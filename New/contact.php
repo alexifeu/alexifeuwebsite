@@ -23,11 +23,13 @@ require 'config.php';
   <a href="mailto:alexifeu@aol.com">
     <img src="img/AOL.svg" alt="AOL" width="400" />
   </a>
-  <p>If you have any questions, need support, or require further assistance,</p>
-  <p>please don't hesitate to contact us.</p>
-  <p>
-    E-Mail: <a class="contact" href="mailto:alexifeu@aol.com">alexifeu@aol.com</a>
-  </p>
+  <main class="textcontainer">
+    <p>If you have any questions, need support, or require further assistance,</p>
+    <p>please don't hesitate to contact us.</p>
+    <p>
+      E-Mail: <a class="contact" href="mailto:alexifeu@aol.com">alexifeu@aol.com</a>
+    </p>
+  </main>
   <?php include('footer.php'); ?>
 </body>
 

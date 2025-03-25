@@ -20,9 +20,8 @@ require 'config.php';
 <body>
     <?php require 'nav.php'; ?>
     <main class="textcontainer">
-
         <h1>Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> 21.03.2025</p>
+        <p><strong>Effective Date:</strong> 25.03.2025</p>
 
         <p>Welcome to <strong>Alexifeu.com</strong>. We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your data, as well as your rights regarding your personal information.</p>
 

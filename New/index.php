@@ -20,18 +20,22 @@ require 'config.php';
 <body>
   <?php require 'nav.php'; ?>
   <a href="https://us.shop.battle.net" target="_blank">
-    <img class="top" src="img/Mlg.png" alt="MLG Pro" width="600" />
+    <img src="img/Mlg.png" alt="MLG Pro" width="600" />
   </a>
-  <h1>Welcome to Alexifeu.com</h1>
-  <h1>It is all you could ever want;</h1>
-  <h2>
-    Doritos, Mountain Dew, Weed, Pokémon, Chuck Norris, Dubstep, Illuminati,<br />
-    FaZe Clan, OpTic Gaming, MLG Montages, Swag, Sanic, Cats, 360 Noscopes,<br />
-    Epic moments, Sample Texts, Fun, Legends, Memes, and everything you love!
-  </h2>
-  <p>All images are clickable links</p>
+  <header>
+    <h1>Welcome to Alexifeu</h1>
+    <h2>It is all you could ever want;</h2>
+  </header>
+  <main class="textcontainer">
+    <h2>
+      Doritos, Mountain Dew, Weed, Pokémon, Chuck Norris, Dubstep, Illuminati,
+      FaZe Clan, OpTic Gaming, MLG Montages, Swag, Sanic, Cats, 360 Noscopes,
+      Epic moments, Sample Texts, Fun, Memes everything you love!
+    </h2>
+  </main>
+  <h3>All images are clickable links</h3>
   <a href="https://youtu.be/P9IL8fHTvgk?si=-oQY-Ga3uxJmIOgp" target="_blank">
-    <img src="img/Illuminati_triangle_eye.png" alt="Loominadi" width="400" />
+    <img class="img1" src="img/Illuminati_triangle_eye.png" alt="Loominadi" width="400" />
   </a>
   <br />
   <p>Loominadi confirmed has Swag! DATSIK - FIREPOWER</p>
@@ -80,46 +84,50 @@ require 'config.php';
   <a href="https://opticgaming.com/" target="_blank">
     <img src="img/optic.svg" alt="OpTic Gaming" width="400" />
   </a>
-  <p>OpTic Gaming Trickshots ur dad</p>
-  <a href="https://doritos.com/" target="_blank">
-    <img src="img/Doritos.png" alt="Doritos" width="400" />
+  <span>
+    <p>OpTic Gaming Trickshots ur dad</p>
+    <a href="https://doritos.com/" target="_blank">
+      <img src="img/Doritos.png" alt="Doritos" width="400" />
+    </a>
+    <a href="https://www.mountaindew.com/" target="_blank">
+      <img src="img/mtndew.png" alt="Mountain Dew" width="400" />
+      <p>MTN DEW n DORITOS are real gamer foods!!</p>
+    </a>
+  </span>
+  <a href="https://www.steelseries.com/" target="_blank">
+    <img src="img/Steelseries.png" alt="SteelSeries" width="400" />
   </a>
-  <a href="https://www.mountaindew.com/" target="_blank">
-    <img src="img/mtndew.png" alt="Mountain Dew" width="400" />
-    <p>MTN DEW n DORITOS are real gamer foods!!</p>
-    <a href="https://www.steelseries.com/" target="_blank">
-      <img src="img/Steelseries.png" alt="SteelSeries" width="400" />
-    </a>
-    <p>All of my gear is from le epic SteelSeries</p>
-    <a href="https://www.turtlebeach.com/" target="_blank">
-      <img src="img/Turtle.svg" alt="TurtleBeach" width="400" />
-    </a>
-    <p>I used to use Turtle Beach</p>
-    <a href="https://gfuel.com" target="_blank">
-      <img src="img/gfuel.svg" alt="G FUEL" width="400" />
-    </a>
-    <p>Waiting for G Fuel Gamer Girl Bathwater</p>
-    <a href="https://scufgaming.com/" target="_blank">
-      <img src="img/scuf.svg" alt="Scuf Gaming" width="400" />
-    </a>
-    <p>My Scuf Prestige broke really fast!</p>
-    <a href="https://www.elgato.com/" target="_blank">
-      <img src="img/Elgato.webp" alt="Elgato" width="400" />
-    </a>
-    <p>Elgato Gaming</p>
-    <a href="https://www.logitechg.com/de-de/collections/astro-series.html" target="_blank">
-      <img src="img/astro.png" alt="Astro Gaming" width="400" />
-    </a>
-    <p>Astro gaming is pretty good but very expensive</p>
-    <a href="http://gaemspge.com/" target="_blank">
-      <img src="img/GAEMS.png" alt="gaems" width="400" />
-    </a>
-    <p>RIP GAEMS ;_;</p>
-    <a href="https://obeyclothing.com/" target="_blank">
-      <img src="img/obey.png" alt="Obey" width="400" />
-    </a>
-    <p>I paid way too much shipping</p>
-    <?php include('footer.php'); ?>
+  <p>All of my gear is from le epic SteelSeries</p>
+  <a href="https://www.turtlebeach.com/" target="_blank">
+    <img src="img/Turtle.svg" alt="TurtleBeach" width="400" />
+  </a>
+  <p>I used to use Turtle Beach</p>
+  <a href="https://gfuel.com" target="_blank">
+    <img src="img/gfuel.svg" alt="G FUEL" width="400" />
+  </a>
+  <p>Waiting for G Fuel Gamer Girl Bathwater</p>
+  <a href="https://scufgaming.com/" target="_blank">
+    <img src="img/scuf.svg" alt="Scuf Gaming" width="400" />
+  </a>
+  <p>My Scuf Prestige broke really fast!</p>
+  <a href="https://www.elgato.com/" target="_blank">
+    <img src="img/Elgato.webp" alt="Elgato" width="400" />
+  </a>
+  <p>Elgato Gaming</p>
+  <a href="https://www.logitechg.com/de-de/collections/astro-series.html" target="_blank">
+    <img src="img/astro.png" alt="Astro Gaming" width="400" />
+  </a>
+  <p>Astro gaming is pretty good but very expensive</p>
+  <a href="http://gaemspge.com/" target="_blank">
+    <img src="img/GAEMS.png" alt="gaems" width="400" />
+  </a>
+  <p>RIP GAEMS ;_;</p>
+  <a href="https://obeyclothing.com/" target="_blank">
+    <img src="img/obey.png" alt="Obey" width="400" />
+  </a>
+  <p>I paid way too much shipping</p>
+  </main>
+  <?php include('footer.php'); ?>
 </body>
 
 </html>
