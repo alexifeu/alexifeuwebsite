@@ -7,7 +7,7 @@
     <div>
       <a href="#">Advertising</a>
       <a href="#">Business</a>
-      <a href="#">How Search Works</a>
+      <a href="/Sitemap">Sitemap</a>
     </div>
     <div>
       <a href="/privacy">Privacy</a>

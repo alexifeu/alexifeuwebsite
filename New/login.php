@@ -48,7 +48,7 @@ if (isset($_POST["submit"])) {
 <body class="loginbody">
   <?php require 'nav.php'; ?>
   <h1>Login</h1>
-  <form method="post" action="" autocomplete="off">
+  <form method="post" autocomplete="off">
     <input type="text" name="username" id="username" placeholder="Username" required>
     <input type="password" name="password" id="password" placeholder="Password" required>
     <p class="pass">Forgot Password?</p>

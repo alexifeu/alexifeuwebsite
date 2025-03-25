@@ -52,16 +52,16 @@ if (isset($_POST["submit"])) {
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sign up for Alexifeu to join the community and get access to exclusive content, features, and updates." />
-  <meta name="keywords" content="signup, create account, join Alexifeu, exclusive content, sign up for Alexifeu" />
-  <meta property="og:title" content="Sign Up - Alexifeu" />
-  <meta property="og:description" content="Become a part of Alexifeu by signing up for an account today. Get access to exclusive content and enjoy a personalized experience." />
-  <meta property="og:image" content="path/to/image.jpg" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign up for Alexifeu to join the community and get access to exclusive content, features, and updates.">
+  <meta name="keywords" content="signup, create account, join Alexifeu, exclusive content, sign up for Alexifeu">
+  <meta property="og:title" content="Sign Up - Alexifeu">
+  <meta property="og:description" content="Become a part of Alexifeu by signing up for an account today. Get access to exclusive content and enjoy a personalized experience.">
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="stylesheet" href="style.css">
   <title>Signup to Alexifeu.com</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body class="loginbody">
@@ -83,38 +83,38 @@ if (isset($_POST["submit"])) {
     </svg>
   </div>
   <h1>Signup</h1>
-  <form method="post" action="" autocomplete="off">
-    <input type="text" placeholder="Name" id="name" name="name" required />
+  <form method="post" action="signup.php" autocomplete="off">
+    <input type="text" placeholder="Name" id="name" name="name" required>
     <input
       type="text"
       placeholder="Username"
       id="username"
       name="username"
-      required />
+      required>
     <input
       type="email"
       placeholder="EMail"
       id="email"
       name="email"
-      required />
+      required>
     <input
       type="password"
       placeholder="Choose Password"
       id="password"
       name="password"
-      required />
+      required>
     <input
       type="password"
       placeholder="Confirm Password"
       id="confirmpassword"
       name="confirmpassword"
-      required /><br />
+      required><br>
     <label>
       I agree to the <a class="legal" href="/privacy" target="_blank">terms and conditions</a>
       <input type="checkbox" id="termsCheckbox" required>
     </label>
     <p class="pass">Forgot Password?</p>
-    <input type="submit" name="submit" value="Get Started" />
+    <input type="submit" name="submit" value="Get Started">
     <p>Already a member? <a class="login" href="/login">Login</a></p>
   </form>
 </body>
