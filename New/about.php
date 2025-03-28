@@ -22,14 +22,14 @@ require 'config.php';
   <h1>About Us</h1>
   <main class="textcontainer">
     <h2>Welcome to Alexifeu</h2>
-    <p>The ultimate hub for gaming, memes, epic moments</p>
-    <p>and everything that makes the internet awesome!</p>
+    <p>The ultimate hub for gaming, memes, epic moments
+      and everything that makes the internet awesome!</p>
     <h2>Our Mission</h2>
-    <p>We aim to bring fun, creativity, and nostalgia together in one place,</p>
-    <p>celebrating the best of internet culture in all its forms.</p>
+    <p>We aim to bring fun, creativity, and nostalgia together in one place,
+      celebrating the best of internet culture in all its forms.</p>
     <h2>Who We Are</h2>
-    <p>Founded by <strong>Alexander Rankl</strong>, Alexifeu is a passion project dedicated to</p>
-    <p>internet enthusiasts who love gaming, memes, and online culture.</p>
+    <p>Founded by <strong>Alexander Rankl</strong>, Alexifeu is a passion project dedicated to
+      internet enthusiasts who love gaming, memes, and online culture.</p>
     <h2>Licensing & Copyright</h2>
     <a href="http://www.wtfpl.net/" target="_blank">
       <img src="img/wtfpl.png" alt="WTFPL" width="50">
